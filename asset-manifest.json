@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/AlbbercaGit/DiegoEscriche/static/css/main.a970f717.css",
-    "main.js": "/AlbbercaGit/DiegoEscriche/static/js/main.3e74441e.js",
+    "main.css": "/AlbbercaGit/DiegoEscriche/static/css/main.3e6c7661.css",
+    "main.js": "/AlbbercaGit/DiegoEscriche/static/js/main.7926a73b.js",
     "static/js/453.ca90ef89.chunk.js": "/AlbbercaGit/DiegoEscriche/static/js/453.ca90ef89.chunk.js",
     "static/media/logo.svg": "/AlbbercaGit/DiegoEscriche/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/AlbbercaGit/DiegoEscriche/index.html",
-    "main.a970f717.css.map": "/AlbbercaGit/DiegoEscriche/static/css/main.a970f717.css.map",
-    "main.3e74441e.js.map": "/AlbbercaGit/DiegoEscriche/static/js/main.3e74441e.js.map",
+    "main.3e6c7661.css.map": "/AlbbercaGit/DiegoEscriche/static/css/main.3e6c7661.css.map",
+    "main.7926a73b.js.map": "/AlbbercaGit/DiegoEscriche/static/js/main.7926a73b.js.map",
     "453.ca90ef89.chunk.js.map": "/AlbbercaGit/DiegoEscriche/static/js/453.ca90ef89.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a970f717.css",
-    "static/js/main.3e74441e.js"
+    "static/css/main.3e6c7661.css",
+    "static/js/main.7926a73b.js"
   ]
 }
