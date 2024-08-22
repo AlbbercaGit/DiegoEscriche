@@ -10,12 +10,12 @@ const Header = () => {
 
   return (
     <header className={`flex justify-center ${isOpen ? 'bg-transparent' : 'bg-transparent'} text-black font-sans relative z-10`}>
-      <div className="absolute w-4/5 h-[8vh] container mx-auto flex items-center justify-between">
+      <div className="absolute w-4/5 h-[8vh] container mx-auto flex items-center justify-between md:relative">
         {/* Botón de menú */}
 
 
         {/* Contenedor para centrar el título */}
-        <div className="flex-1 flex items-center justify-start text-2xl font-bold">
+        <div className="flex-1 flex items-center justify-start text-2xl font-bold ">
           Diego Escriche
         </div>
         <button
