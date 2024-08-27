@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Discos from './components/Discos';
 import Galeria from './components/Galeria';
+// import Contacto from './components/Contacto';
 import Footer from './components/Footer';
 import { ReactLenis, useLenis } from 'lenis/react'
 
@@ -25,6 +26,7 @@ function App() {
       <Hero />
       <Discos />
       <Galeria />
+      {/* <Contacto /> */}
       <Footer />
       </ReactLenis>
     </div>

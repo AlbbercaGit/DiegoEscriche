@@ -6,14 +6,14 @@ function Footer() {
   const { scrollYProgress } = useScroll({ target: targetRef });
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-100%"]);
   return (
-    <main ref={targetRef} className="relative h-[200vh]">
+    <main ref={targetRef} className="relative h-[200vh] md:h-[350vh]">
       <div className="sticky w-full top-0 flex h-[100vh] items-center  overflow-hidden">
         
         <motion.div
           style={{ x }}
           className="flex gap-4 items-center justify-center"
         >
-          <div className=" relative h-[400px] w-[400px] flex justify-center items-center">
+          <div className=" relative h-[400px] w-[400px] flex justify-center items-center md:h-[600px] md:w-[600px]">
             <img
               alt="Diego de espaldas"
               className="absolute inset-0 h-full    shadow-lg"
@@ -33,7 +33,7 @@ function Footer() {
             ></iframe>
           </div>
           {/* Fantastic Explosion */}
-          <div className=" relative h-[400px] w-[400px] flex justify-center items-center">
+          <div className=" relative h-[400px] w-[400px] flex justify-center items-center  md:h-[600px] md:w-[600px]">
             <img
               alt="Diego de espaldas"
               className="absolute inset-0 h-full    shadow-lg"
@@ -52,7 +52,7 @@ function Footer() {
             ></iframe>
           </div>
           {/* Futuro Terror */}
-          <div className=" relative h-[400px] w-[400px] flex justify-center items-center">
+          <div className=" relative h-[400px] w-[400px] flex justify-center items-center  md:h-[600px] md:w-[600px]">
             <img
               alt="Diego de espaldas"
               className="absolute inset-0 h-full    shadow-lg"
@@ -72,7 +72,7 @@ function Footer() {
             ></iframe>
           </div>
           {/* Mausoleo */}
-          <div className=" relative h-[400px] w-[400px] flex justify-center items-center">
+          <div className=" relative h-[400px] w-[400px] flex justify-center items-center  md:h-[600px] md:w-[600px]">
             <img
               alt="Diego de espaldas"
               className="absolute inset-0 h-full    shadow-lg"
@@ -92,7 +92,7 @@ function Footer() {
             ></iframe>
           </div>
           {/* Santa Companha */}
-          <div className=" relative h-[400px] w-[400px] flex justify-center items-center">
+          <div className=" relative h-[400px] w-[400px] flex justify-center items-center  md:h-[600px] md:w-[600px]">
             <img
               alt="Diego de espaldas"
               className="absolute inset-0 h-full    shadow-lg"
