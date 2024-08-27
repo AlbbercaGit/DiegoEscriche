@@ -32,7 +32,7 @@ function Hero() {
     x2: x2_1,
     opacity: opacity_1,
     isInView: isInView1,
-  } = useScrollTransforms(containerRef1,["start end", "end start 0.8"]);
+  } = useScrollTransforms(containerRef1, ["start end", "end start 0.8"]);
 
   // Llamar al hook para el segundo contenedor
   const {
@@ -40,20 +40,20 @@ function Hero() {
     x2: x2_2,
     opacity: opacity_2,
     isInView: isInView2,
-  } = useScrollTransforms(containerRef2,["start end", "end start 20"]);
+  } = useScrollTransforms(containerRef2, ["start end", "end start 20"]);
 
   const {
     x1: x1_3,
     x2: x2_3,
     opacity: opacity_3,
     isInView: isInView3,
-  } = useScrollTransforms(containerRef3,["start end", "end start 20"]);
+  } = useScrollTransforms(containerRef3, ["start end", "end start 20"]);
   const {
     x1: x1_4,
     x2: x2_4,
     opacity: opacity_4,
     isInView: isInView4,
-  } = useScrollTransforms(containerRef4,["start end", "end start 20"]);
+  } = useScrollTransforms(containerRef4, ["start end", "end start 20"]);
   const {
     x1: x1_5,
     x2: x2_5,
@@ -62,120 +62,134 @@ function Hero() {
   } = useScrollTransforms(containerRef5);
 
   return (
-    <div className="h-[210vh] w-full flex flex-col justify-center items-center md:h-[92h]  font-sans">
+    <div className="h-[230vh] w-full flex flex-col justify-center items-center md:h-[330vh]  font-sans">
+      {/* Titulo */}
       <div
         ref={containerRef1}
         id="container1"
-        className="w-full  flex items-center justify-center"
+        className="w-full flex items-center justify-center md:h-[15vh]"
       >
-        <div className="w-full h-[15vh] flex justify-center items-center overflow-hidden">
+        {" "}
+        <div className="w-full h-[15vh] flex justify-center items-center overflow-hidden md:h-full">
+          {" "}
           <motion.h1
-            className="text-4xl font-semibold md:text-8xl  text-right"
+            className="text-4xl font-semibold md:text-8xl text-right"
             style={{ x: x1_1, opacity: opacity_1 }}
           >
-            Pro
-          </motion.h1>
+            {" "}
+            Pro{" "}
+          </motion.h1>{" "}
           <motion.h1
-            className="text-4xl font-semibold md:text-8xl  text-left"
+            className="text-4xl font-semibold md:text-8xl text-left"
             style={{ x: x2_1, opacity: opacity_1 }}
           >
-            yectos
-          </motion.h1>
-        </div>
-      </div>
-      <div className="h-[70vh] w-4/5 flex flex-col justify-center items-center">
-        {/* Portada */}
+            {" "}
+            yectos{" "}
+          </motion.h1>{" "}
+        </div>{" "}
+      </div>{" "}
+      <div className="h-[85vh] w-4/5 flex flex-col md:h-[105vh] md:w-3/5">
+        {" "}
+        {/* Portada */}{" "}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: [0, 0.45, 0.9] }}
-          viewport={{ margin: "-150px", once: true }}
+          viewport={{ margin: "-150px" }}
+          className="h-[30vh] w-4/5 flex items-start justify-start md:h-[40vh] "
         >
+          {" "}
           <img
             alt="Diego de espaldas"
-            className="w-[75%] shadow-lg md:w-[50%]"
-            src="https://raw.githubusercontent.com/AlbbercaGit/videos/6ae1eba429a0f70c4be52cfa057dae20b79e50d2/454513556_857560969250007_7026347463685353994_n.jpg
-"
-          ></img>
-        </motion.div>
-        {/* texto */}
+            className=" h-full shadow-lg "
+            src="https://raw.githubusercontent.com/AlbbercaGit/videos/6ae1eba429a0f70c4be52cfa057dae20b79e50d2/454513556_857560969250007_7026347463685353994_n.jpg "
+          ></img>{" "}
+        </motion.div>{" "}
+        {/* texto */}{" "}
         <motion.div
-          className="w-full h-[10vh]  flex flex-col items-end justify-center "
+          className="w-full h-[10vh] flex flex-col items-start justify-center md:h-[20vh]"
           ref={containerRef2}
         >
+          {" "}
           <motion.h1
-            className="w-[75%] text-xl font-semibold    flex items-start md:text-8xl md:text-left"
+            className="h-full text-xl font-semibold flex items-end md:text-7xl md:text-left md:items-start"
             style={{ x: x1_2, opacity: opacity_2 }}
           >
-            La paloma
-          </motion.h1>
+            {" "}
+            La paloma{" "}
+          </motion.h1>{" "}
           <motion.h1
-            className="w-[75%]  text-xl font-semibold    flex items-start md:text-8xl md:text-left"
+            className="h-full text-xl font-semibold flex items-start md:text-7xl md:text-right md:w-full "
             style={{ x: x2_2, opacity: opacity_2 }}
           >
-            Todavia no
-          </motion.h1>
-        </motion.div>
-        {/* foto */}
+            {" "}
+            Todavia no{" "}
+          </motion.h1>{" "}
+        </motion.div>{" "}
+        {/* foto */}{" "}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: [0, 0.45, 0.9] }}
-          viewport={{ margin: "-50px", once: true }}
-          className="flex items-end justify-end 
-        "
+          viewport={{ margin: "-50px" }}
+          className="flex items-end justify-end h-[30vh] w-full md:h-[40vh] "
         >
+          {" "}
           <img
             alt="Diego de espaldas"
-            className="w-[75%] shadow-lg md:w-[50%]"
-            src="https://raw.githubusercontent.com/AlbbercaGit/videos/6ae1eba429a0f70c4be52cfa057dae20b79e50d2/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(5).png
-"
-          ></img>
-        </motion.div>
+            className=" h-full shadow-lg "
+            src="https://raw.githubusercontent.com/AlbbercaGit/videos/6ae1eba429a0f70c4be52cfa057dae20b79e50d2/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(5).png "
+          ></img>{" "}
+        </motion.div>{" "}
       </div>
       {/* 3 Parte  */}
-      <div className="h-[70vh] w-4/5 flex flex-col justify-center items-center">
+      <div className="h-[80vh] w-4/5 flex flex-col justify-center items-center md:h-[105vh] md:w-3/5 ">
         {/* Portada */}
+
         <motion.div
-          className="flex items-end justify-end "
+          className="flex items-end justify-end  h-[30vh] w-full md:h-[40vh] md:relative"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: [0, 0.45, 0.9] }}
-          viewport={{ margin: "-150px", once: true }}
+          viewport={{ margin: "-150px" }}
         >
           <img
             alt="Diego de espaldas"
-            className="w-[75%] shadow-lg md:w-[50%]"
+            className=" h-full  shadow-lg "
             src="https://raw.githubusercontent.com/AlbbercaGit/videos/73b8616cba6890f7ceb78b38fa72691f0be584d6/440229246_620712956943862_5673504015020928749_n.jpg
 
 
 "
           ></img>
         </motion.div>
+
         {/* texto */}
+
         <motion.div
           ref={containerRef3}
-          className="w-full h-[10%] flex flex-col justify-center items-end text-left"
+          className="w-full h-[10%] flex flex-col justify-center items-end text-left  md:h-[20vh]"
         >
           <motion.h1
-            className="w-[75%] text-xl font-semibold flex items-start justify-start md:text-8xl md:text-left"
+            className="h-full text-xl font-semibold flex items-start justify-start md:text-7xl md:text-left"
             style={{ x: x2_3, opacity: opacity_3 }}
           >
             Depresión Sonora
           </motion.h1>
           <motion.h1
-            className="w-[75%] text-xl font-semibold flex items-start justify-start md:text-8xl md:text-left"
+            className="h-full text-xl font-semibold flex items-start justify-start md:text-7xl md:text-left"
             style={{ x: x1_3, opacity: opacity_3 }}
           >
             MAKINAVAJA
           </motion.h1>
         </motion.div>
+
         {/* foto */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: [0, 0.45, 0.9] }}
-          viewport={{ margin: "-150px", once: true }}
+          viewport={{ margin: "-150px" }}
+          className="h-[30vh] w-full flex  items-start justify-start md:h-[40vh]"
         >
           <img
             alt="Diego de espaldas"
-            className="w-[75%] shadow-lg md:w-[50%]"
+            className=" h-full  shadow-lg "
             src="https://raw.githubusercontent.com/AlbbercaGit/videos/73b8616cba6890f7ceb78b38fa72691f0be584d6/440201971_278410868660109_6163186613898693517_n.jpg
 
 "
@@ -184,47 +198,55 @@ function Hero() {
       </div>
       {/* 2 Parte */}
       <div
-        className="h-[70vh] w-4/5 flex flex-col justify-center items-center"
+        className="h-auto w-4/5 flex flex-col justify-center items-center md:h-[105vh] md:w-3/5"
         ref={containerRef4}
       >
         {/* texto */}
-        <div className="w-full h-[10vh] flex flex-col justify-end items-start text-left">
+        <div className="w-full h-[10vh] flex flex-col justify-end items-start text-left md:justify-center md:w-3/5 ">
           <motion.h1
-            className="w-[75%] text-xl font-semibold flex items-start justify-start  text-left md:text-8xl md:text-left"
+            className="w-[75%] text-xl font-semibold flex items-start justify-start  text-left md:text-7xl md:text-left "
             style={{ x: x1_4, opacity: opacity_4 }}
           >
             La plata
           </motion.h1>
         </div>
         {/* Foto Abajo */}
-        <div className="flex w-full h-[45vh] overflow-hidden">
-          <div className="relative w-full h-[45vh]" ref={containerRef5}>
+        <div className="flex w-full h-[55vh] overflow-hidden md:h-[85vh] md:justify-center">
+          <div
+            className="relative w-full h-[55vh] md:h-[85vh] md:items-center md:w-3/5 "
+            ref={containerRef5}
+          >
             <motion.img
               initial={{ opacity: 0 }}
               whileInView={{ opacity: [0, 0.45, 0.9] }}
-              viewport={{ margin: "-150px", once: true }}
+              viewport={{ margin: "-150px" }}
               alt="Diego de espaldas"
-              className="absolute w-[75%] shadow-lg md:w-[50%] z-20"
-              src="https://raw.githubusercontent.com/AlbbercaGit/videos/73b8616cba6890f7ceb78b38fa72691f0be584d6/440201971_278410868660109_6163186613898693517_n.jpg"
+              className="absolute w-auto h-[30vh] shadow-lg  z-20 md:h-[50vh] "
+              src="https://raw.githubusercontent.com/AlbbercaGit/videos/df25520c7988c6e6b1b5fa21be9da0e4c83219e8/331749368_739196417584794_4403896613756705700_n%20(1).jpg
+"
             ></motion.img>
             {/* Foto Arriba */}
-            <div  className=" flex justify-end items-end">
+            <div className=" flex justify-end items-end">
               <motion.img
-              
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: [0, 0.45, 0.9] }}
-                viewport={{ margin: "-150px", once: true }}
+                viewport={{ margin: "-150px" }}
                 alt="Diego de espaldas"
-                className="absolute w-[75%] shadow-lg md:w-[50%] top-[40%] z-10 "
-                src="https://raw.githubusercontent.com/AlbbercaGit/videos/73b8616cba6890f7ceb78b38fa72691f0be584d6/440229246_620712956943862_5673504015020928749_n.jpg"
+                className="absolute w-auto h-[30vh] shadow-lg  top-[50%] z-10 md:h-[50vh] md:top-[40%] "
+                src="https://raw.githubusercontent.com/AlbbercaGit/videos/df25520c7988c6e6b1b5fa21be9da0e4c83219e8/328869643_589075623164785_4558648590171868223_n.jpg
+
+
+
+
+"
               ></motion.img>
             </div>
           </div>
         </div>
         {/* texto 2*/}
-        <div className="w-full  flex flex-col justify-end items-end text-left " >
+        <div className="w-full h-[10vh] flex flex-col justify-start items-end text-left md:h-[10vh] md:w-3/5 md:justify-start">
           <motion.h1
-            className="w-[75%] text-xl font-semibold flex items-end justify-end md:text-8xl md:text-left"
+            className="w-[75%] h-full text-xl font-semibold flex items-start justify-end md:text-7xl md:text-left "
             style={{ x: x2_5, opacity: opacity_5 }}
           >
             Sueños
