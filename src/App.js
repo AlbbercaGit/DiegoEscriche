@@ -1,35 +1,30 @@
 import React from 'react';
-// import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Discos from './components/Discos';
 import Galeria from './components/Galeria';
-// import Contacto from './components/Contacto';
+import Contacto from './components/Contacto';
 import Footer from './components/Footer';
 import { ReactLenis, useLenis } from 'lenis/react'
 
-function Layout() {
-  const lenis = useLenis(({ scroll }) => {
-    // called every scroll
-  })
-
-
-
-}
-
 function App() {
+  const lenis = useLenis(({ scroll }) => {
+    // Aquí puedes manejar eventos de scroll
+    console.log(`Scroll position: ${scroll}`);
+  });
+
   return (
-    <div className="App">
-          <ReactLenis root>
-      <Header />
-      <Hero />
-      <Discos />
-      <Galeria />
-      {/* <Contacto /> */}
-      <Footer />
-      </ReactLenis>
-    </div>
+    <ReactLenis root>
+      <div className="App">
+        <Header />
+        <Hero />
+        <Discos />
+        <Galeria />
+        <Contacto />
+        <Footer />
+      </div>
+    </ReactLenis>
   );
 }
 

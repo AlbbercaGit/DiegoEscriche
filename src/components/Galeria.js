@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 function Footer() {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: targetRef });
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-100%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-80%"]);
   return (
     <main ref={targetRef} className="relative h-[200vh] md:h-[350vh]">
       <div className="sticky w-full top-0 flex h-[100vh] items-center  overflow-hidden">
@@ -111,6 +111,7 @@ function Footer() {
               className="relative z-10"
             ></iframe>
           </div>
+          
         </motion.div>
       </div>
     </main>

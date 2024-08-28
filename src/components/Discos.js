@@ -44,7 +44,7 @@ function Hero() {
 
   const {
     x1: x1_3,
-    x2: x2_3,
+    x3: x2_3,
     opacity: opacity_3,
     isInView: isInView3,
   } = useScrollTransforms(containerRef3, ["start end", "end start 20"]);
@@ -56,13 +56,13 @@ function Hero() {
   } = useScrollTransforms(containerRef4, ["start end", "end start 20"]);
   const {
     x1: x1_5,
-    x2: x2_5,
+    x3: x2_5,
     opacity: opacity_5,
     isInView: isInView5,
   } = useScrollTransforms(containerRef5);
 
   return (
-    <div className="h-[230vh] w-full flex flex-col justify-center items-center md:h-[330vh]  font-sans">
+    <div className="h-[230vh] max-w-[100vw] flex flex-col justify-center items-center md:h-[330vh]  font-sans">
       {/* Titulo */}
       <div
         ref={containerRef1}
@@ -70,7 +70,7 @@ function Hero() {
         className="w-full flex items-center justify-center md:h-[15vh]"
       >
         {" "}
-        <div className="w-full h-[15vh] flex justify-center items-center overflow-hidden md:h-full">
+        <div className="w-full h-[15vh] flex  justify-center items-center overflow-hidden  md:h-full">
           {" "}
           <motion.h1
             className="text-4xl font-semibold md:text-8xl text-right"
@@ -80,7 +80,7 @@ function Hero() {
             Pro{" "}
           </motion.h1>{" "}
           <motion.h1
-            className="text-4xl font-semibold md:text-8xl text-left"
+            className="text-4xl box-border font-semibold md:text-8xl text-left overflow-hidden"
             style={{ x: x2_1, opacity: opacity_1 }}
           >
             {" "}
@@ -118,7 +118,7 @@ function Hero() {
             La paloma{" "}
           </motion.h1>{" "}
           <motion.h1
-            className="h-full text-xl font-semibold flex items-start md:text-7xl md:text-right md:w-full "
+            className="h-full text-xl box-border font-semibold overflow-hidden flex items-start md:text-7xl md:text-right md:w-full "
             style={{ x: x2_2, opacity: opacity_2 }}
           >
             {" "}
@@ -167,7 +167,7 @@ function Hero() {
           className="w-full h-[10%] flex flex-col justify-center items-end text-left  md:h-[20vh]"
         >
           <motion.h1
-            className="h-full text-xl font-semibold flex items-start justify-start md:text-7xl md:text-left"
+            className="h-full box-border text-xl font-semibold overflow-hidden flex items-start justify-start md:text-7xl md:text-left"
             style={{ x: x2_3, opacity: opacity_3 }}
           >
             Depresión Sonora
@@ -246,7 +246,7 @@ function Hero() {
         {/* texto 2*/}
         <div className="w-full h-[10vh] flex flex-col justify-start items-end text-left md:h-[10vh] md:w-3/5 md:justify-start">
           <motion.h1
-            className="w-[75%] h-full text-xl font-semibold flex items-start justify-end md:text-7xl md:text-left "
+            className="w-[75%] box-border h-full text-xl font-semibold  overflow-hidden flex items-start justify-end md:text-7xl md:text-left "
             style={{ x: x2_5, opacity: opacity_5 }}
           >
             Sueños
