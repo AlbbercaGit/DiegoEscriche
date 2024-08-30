@@ -61,6 +61,17 @@ function Hero() {
     isInView: isInView5,
   } = useScrollTransforms(containerRef5);
 
+
+
+  const fadeInLeft = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0 }
+  };
+
+  const fadeInRight = {
+    hidden: { opacity: 0, x: 50 },
+    visible: { opacity: 1, x: 0 }
+  };
   return (
     <div className="h-[230vh] max-w-[100vw] flex flex-col justify-center items-center md:h-[330vh]  font-sans">
       {/* Titulo */}
@@ -92,9 +103,13 @@ function Hero() {
         {" "}
         {/* Portada */}{" "}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: [0, 0.45, 0.9] }}
-          viewport={{ margin: "-150px" }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false }}
+          variants={fadeInRight}
+          transition={{ duration: 0.5 }}
+
+
           className="h-[30vh] w-4/5 flex items-start justify-start md:h-[40vh] "
         >
           {" "}
@@ -127,9 +142,11 @@ function Hero() {
         </motion.div>{" "}
         {/* foto */}{" "}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: [0, 0.45, 0.9] }}
-          viewport={{ margin: "-50px" }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false }}
+          variants={fadeInLeft}
+          transition={{ duration: 0.5 }}
           className="flex items-end justify-end h-[30vh] w-full md:h-[40vh] "
         >
           {" "}
@@ -146,9 +163,11 @@ function Hero() {
 
         <motion.div
           className="flex items-end justify-end  h-[30vh] w-full md:h-[40vh] md:relative"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: [0, 0.45, 0.9] }}
-          viewport={{ margin: "-150px" }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false }}
+          variants={fadeInLeft}
+          transition={{ duration: 0.5 }}
         >
           <img
             alt="Diego de espaldas"
@@ -182,9 +201,11 @@ function Hero() {
 
         {/* foto */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: [0, 0.45, 0.9] }}
-          viewport={{ margin: "-150px" }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false }}
+          variants={fadeInRight}
+          transition={{ duration: 0.5 }}
           className="h-[30vh] w-full flex  items-start justify-start md:h-[40vh]"
         >
           <img
@@ -217,9 +238,11 @@ function Hero() {
             ref={containerRef5}
           >
             <motion.img
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: [0, 0.45, 0.9] }}
-              viewport={{ margin: "-150px" }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false }}
+          variants={fadeInLeft}
+          transition={{ duration: 0.5 }}
               alt="Diego de espaldas"
               className="absolute w-auto h-[30vh] shadow-lg  z-20 md:h-[50vh] "
               src="https://raw.githubusercontent.com/AlbbercaGit/videos/df25520c7988c6e6b1b5fa21be9da0e4c83219e8/331749368_739196417584794_4403896613756705700_n%20(1).jpg
@@ -228,9 +251,11 @@ function Hero() {
             {/* Foto Arriba */}
             <div className=" flex justify-end items-end">
               <motion.img
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: [0, 0.45, 0.9] }}
-                viewport={{ margin: "-150px" }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false }}
+          variants={fadeInRight}
+          transition={{ duration: 0.5 }}
                 alt="Diego de espaldas"
                 className="absolute w-auto h-[30vh] shadow-lg  top-[50%] z-10 md:h-[50vh] md:top-[40%] "
                 src="https://raw.githubusercontent.com/AlbbercaGit/videos/df25520c7988c6e6b1b5fa21be9da0e4c83219e8/328869643_589075623164785_4558648590171868223_n.jpg
@@ -247,8 +272,11 @@ function Hero() {
         <div className="w-full h-[10vh] flex flex-col justify-start items-end text-left md:h-[10vh] md:w-3/5 md:justify-start">
           <motion.h1
             className="w-[75%] box-border h-full text-xl font-semibold  overflow-hidden flex items-start justify-end md:text-7xl md:text-left "
-            style={{ x: x2_5, opacity: opacity_5 }}
-          >
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false }}
+            variants={fadeInLeft}
+            transition={{ duration: 0.5 }}          >
             Sueños
           </motion.h1>
         </div>

@@ -1,149 +1,134 @@
-import React, { useState, useEffect } from 'react';
-
-// Componente reutilizable para la rotación de imágenes
-const RotatingImage = ({ images, interval = 500, className, alt }) => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  useEffect(() => {
-    const imageInterval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, interval);
-
-    return () => clearInterval(imageInterval);
-  }, [images, interval]);
-
-  return (
-    <img
-      alt={alt}
-      className={className}
-      src={images[currentImageIndex]}
-    />
-  );
-};
+import React from 'react';
+import { motion } from "framer-motion";
 
 function Contacto() {
-  // Array de URLs de imágenes para la primera rotación
-  const images1 = [
-    "https://raw.githubusercontent.com/AlbbercaGit/videos/main/1/1cuadrada.jpg",
-    // "https://raw.githubusercontent.com/AlbbercaGit/videos/main/1/3.jpg",
-    // "https://raw.githubusercontent.com/AlbbercaGit/videos/main/1/4.jpg",
-    // "https://raw.githubusercontent.com/AlbbercaGit/videos/main/1/5.jpg",
-  ];
+  // URLs de imágenes
+  const image1 = "https://raw.githubusercontent.com/AlbbercaGit/videos/main/1/1cuadrada.jpg";
+  const image2 = "https://raw.githubusercontent.com/AlbbercaGit/videos/main/2/1.jpg";
+  const image3 = "https://raw.githubusercontent.com/AlbbercaGit/videos/main/4/4.jpg";
+  const image4 = "https://raw.githubusercontent.com/AlbbercaGit/videos/main/4/3.jpg";
+  const image5 = "https://raw.githubusercontent.com/AlbbercaGit/videos/main/5/1.jpg";
 
-  // Array de URLs de imágenes para la segunda rotación
-  const images2 = [
-    "https://raw.githubusercontent.com/AlbbercaGit/videos/main/2/1.jpg",
-    // "https://raw.githubusercontent.com/AlbbercaGit/videos/main/2/2.jpg",
-    // "https://raw.githubusercontent.com/AlbbercaGit/videos/main/2/3.jpg",
-    // "https://raw.githubusercontent.com/AlbbercaGit/videos/main/2/4.jpg",
-    // "https://raw.githubusercontent.com/AlbbercaGit/videos/main/2/5.jpg"
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
 
-  ];
+  const fadeInLeft = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0 }
+  };
 
-  // Array de URLs de imágenes para la tercera rotación
-  const images3 = [
-    // "https://raw.githubusercontent.com/AlbbercaGit/videos/main/3/2cuad.jpg",
-        // "https://raw.githubusercontent.com/AlbbercaGit/videos/main/5/3.jpg",
-            // "https://raw.githubusercontent.com/AlbbercaGit/videos/main/4/3.jpg",
-
-    // "https://raw.githubusercontent.com/AlbbercaGit/videos/main/3/3.jpg",
-    "https://raw.githubusercontent.com/AlbbercaGit/videos/main/4/4.jpg",
-    // "https://raw.githubusercontent.com/AlbbercaGit/videos/main/3/5cuad.jpg",
-    // "https://raw.githubusercontent.com/AlbbercaGit/videos/main/3/1cuad.jpg"
-
-  ];
-  const images4 = [
-    // "https://raw.githubusercontent.com/AlbbercaGit/videos/main/4/1.jpg",
-    // "https://raw.githubusercontent.com/AlbbercaGit/videos/main/4/2.jpg",
-    "https://raw.githubusercontent.com/AlbbercaGit/videos/main/4/3.jpg",
-    // "https://raw.githubusercontent.com/AlbbercaGit/videos/main/4/4.jpg",
-    // "https://raw.githubusercontent.com/AlbbercaGit/videos/main/4/5.jpg"
-
-  ];
-  const images5 = [
-    "https://raw.githubusercontent.com/AlbbercaGit/videos/main/5/1.jpg",
-    // "https://raw.githubusercontent.com/AlbbercaGit/videos/main/5/2.jpg",
-    // "https://raw.githubusercontent.com/AlbbercaGit/videos/main/5/3.jpg",
-    // "https://raw.githubusercontent.com/AlbbercaGit/videos/main/5/4.jpg",
-    // "https://raw.githubusercontent.com/AlbbercaGit/videos/main/5/5.jpg"
-
-  ];
+  const fadeInRight = {
+    hidden: { opacity: 0, x: 50 },
+    visible: { opacity: 1, x: 0 }
+  };
 
   return (
-    <div className="font-sans p-6 max-w-2xl mx-auto h-screen flex justify-evenly items-center flex-col ">
-      <h2 className="text-xl w-full text-left flex items-center font-bold h-[10vh]">
+    <div className="font-sans p-6 max-w-2xl mx-auto h-screen flex justify-evenly items-center flex-col">
+      <motion.h2 
+        className="text-xl w-full text-left flex items-center font-bold h-[15vh]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false }}
+        variants={fadeInUp}
+        transition={{ duration: 0.5, delay: 0.3 }}
+      >
         Hablamos de tu proyecto?
-      </h2>
+      </motion.h2>
 
-      <div className="grid grid-cols-2 gap-3 h-[90vh] w-full ">
+      <div className="grid grid-cols-2 gap-3 h-[90vh] w-full">
         {/* Columna izquierda */}
-        <div className="space-y-20 flex justify-center items-center flex-col">
-          {/* Imagen rotativa 1 */}
-          <RotatingImage
-            images={images1}
-            interval={250}
-            className="w-[80%] md:w-[90%] md:h-[25vh] shadow-lg"
-            alt="Imagen rotativa 1"
+        <motion.div 
+          className="space-y-20 flex justify-center items-center flex-col"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false }}
+          variants={fadeInLeft}
+          transition={{ duration: 1, delay: 0.4 }}
+        >
+          <motion.img
+            src={image1}
+            alt="Imagen 1"
+            className="w-[80%] md:w-[90%] md:h-[25vh] shadow-lg object-cover"
+            variants={fadeInLeft}
+            transition={{ duration: 0.5, delay: 0.6 }}
           />
-
-          {/* Imagen fija */}
-          <RotatingImage
-            images={images4}
-            interval={250}
-            className="w-full md:w-[90%] md:h-[25vh] shadow-sm"
-            alt="Imagen rotativa 1"
+          <motion.img
+            src={image4}
+            alt="Imagen 4"
+            className="w-full md:w-[90%] md:h-[25vh] shadow-sm object-cover"
+            variants={fadeInLeft}
+            transition={{ duration: 0.5, delay: 0.8 }}
           />
-
-          {/* Imagen fija */}
-          <RotatingImage
-            images={images5}
-            interval={250}
-            className="w-full md:w-[90%] md:h-[25vh] shadow-lg"
-            alt="Imagen rotativa 1"
+          <motion.img
+            src={image5}
+            alt="Imagen 5"
+            className="w-full md:w-[90%] md:h-[25vh] shadow-lg object-cover"
+            variants={fadeInLeft}
+            transition={{ duration: 0.5, delay: 1 }}
           />
-          </div>
+        </motion.div>
 
         {/* Columna derecha */}
-        <div className="grid grid-rows-6 gap-3 h-full w-full  justify-center items-center flex-col">
+        <motion.div 
+          className="grid grid-rows-6 gap-3 h-full w-full justify-center items-center flex-col"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false }}
+          variants={fadeInRight}
+          transition={{ duration: 0.5, delay: 0.6 }}
+        >
           {/* Espacio vacío */}
           <div className="row-span-1 h-full flex flex-col justify-center">
             <div className="text-center flex justify-center items-center flex-col h-full">
-              <p className="text-lg font-semibold h-1/3 flex items-center">
+              <motion.p 
+                className="text-lg font-semibold h-1/3 flex items-center"
+                variants={fadeInRight}
+                transition={{ duration: 0.5, delay: 0.4 }}
+
+              >
                 Instagram
-              </p>
+              </motion.p>
             </div>
           </div>
 
-          {/* Imagen rotativa 2 */}
-          <div className="row-span-2">
-            <RotatingImage
-              images={images2}
-              interval={250}
-              className="w-full md:w-full md:h-[25vh] shadow-lg"
-              alt="Imagen rotativa 2"
+          {/* Imagen 2 */}
+          <motion.div className="row-span-2" variants={fadeInRight}
+                      transition={{ duration: 0.5, delay: 0.6 }}
+>
+            <img
+              src={image2}
+              alt="Imagen 2"
+              className="w-full md:w-full md:h-[25vh] shadow-lg object-cover"
             />
-          </div>
+          </motion.div>
 
-          {/* Imagen rotativa 3 */}
-          <div className="row-span-2">
-            <RotatingImage
-              images={images3}
-              interval={250}
-              className="w-full md:w-full md:h-[25vh] shadow-lg"
-              alt="Imagen rotativa 3"
+          {/* Imagen 3 */}
+          <motion.div className="row-span-2" variants={fadeInRight}
+                      transition={{ duration: 0.5, delay: 0.8 }}
+>
+            <img
+              src={image3}
+              alt="Imagen 3"
+              className="w-full md:w-full md:h-[25vh] shadow-lg object-cover"
             />
-
-          </div>
+          </motion.div>
 
           {/* Texto de contacto */}
           <div className="row-span-1 h-full flex flex-col justify-center">
             <div className="text-center flex justify-center items-center flex-col h-full">
-            <p className="text-lg font-semibold h-1/3  flex items-end w-full justify-center">
-              Correo
-            </p>
+              <motion.p 
+                className="text-lg font-semibold h-1/3 flex items-end w-full justify-center"
+                variants={fadeInRight}
+                transition={{ duration: 0.5, delay: 0.4 }}
+
+              >
+                Correo
+              </motion.p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

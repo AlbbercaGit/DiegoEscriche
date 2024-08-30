@@ -1,14 +1,37 @@
 import { motion, useTransform, useScroll } from "framer-motion";
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 function Footer() {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: targetRef });
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-80%"]);
+  const [xValues, setXValues] = useState(["1%", "-81%"]);
+
+  // UseEffect para cambiar los valores de x según el tamaño de la pantalla
+  useEffect(() => {
+    const updateXValues = () => {
+      if (window.innerWidth < 768) {
+        // Pantallas móviles
+        setXValues(["1%", "-81%"]);
+      } else {
+        // Pantallas más grandes (desktop/tablets)
+        setXValues(["1%", "-40%"]);
+      }
+    };
+
+    // Inicializar con el valor correcto
+    updateXValues();
+
+    // Escuchar cambios de tamaño en la ventana
+    window.addEventListener("resize", updateXValues);
+
+    // Cleanup listener on component unmount
+    return () => window.removeEventListener("resize", updateXValues);
+  }, []);
+
+  const x = useTransform(scrollYProgress, [0, 1], xValues);
   return (
     <main ref={targetRef} className="relative h-[400vh] md:h-[350vh]">
       <div className="sticky w-full top-0 flex h-[100vh] items-center  overflow-hidden">
-        
         <motion.div
           style={{ x }}
           className="flex gap-4 items-center justify-center"
@@ -17,19 +40,20 @@ function Footer() {
             <img
               alt="Diego de espaldas"
               className="absolute inset-0 h-full    shadow-lg"
-              src="https://raw.githubusercontent.com/AlbbercaGit/videos/5206f38db9655f68e3a2261efe8dab3aed4ba60c/escama.jpg
+              src="https://raw.githubusercontent.com/AlbbercaGit/videos/main/turboviolencia.jpg
 "
             />
 
             <iframe
-              src="https://open.spotify.com/embed/track/2vlCD96gbODeKevuusi8Ic?utm_source=generator"
+              src="https://open.spotify.com/embed/track/1kTMe7VPlUt2gby7NqWzoi?utm_source=generator"
               width="60%"
               height="352"
               frameBorder="0"
-              allowFullScreen
+              allowfullscreen=""
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
               className="relative z-10"
+
             ></iframe>
           </div>
           {/* Fantastic Explosion */}
@@ -111,7 +135,6 @@ function Footer() {
               className="relative z-10"
             ></iframe>
           </div>
-          
         </motion.div>
       </div>
     </main>
