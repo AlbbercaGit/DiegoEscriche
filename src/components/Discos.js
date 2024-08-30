@@ -84,14 +84,14 @@ function Hero() {
         <div className="w-full h-[15vh] flex  justify-center items-center overflow-hidden  md:h-full">
           {" "}
           <motion.h1
-            className="text-4xl font-semibold md:text-8xl text-right"
+            className="text-4xl font-semibold md:text-6xl lg:text-8xl text-right"
             style={{ x: x1_1, opacity: opacity_1 }}
           >
             {" "}
             Pro{" "}
           </motion.h1>{" "}
           <motion.h1
-            className="text-4xl box-border font-semibold md:text-8xl text-left overflow-hidden"
+            className="text-4xl box-border font-semibold md:text-6xl lg:text-8xl text-left overflow-hidden"
             style={{ x: x2_1, opacity: opacity_1 }}
           >
             {" "}
@@ -126,14 +126,14 @@ function Hero() {
         >
           {" "}
           <motion.h1
-            className="h-full text-xl font-semibold flex items-end md:text-7xl md:text-left md:items-start"
+            className="h-full text-xl font-semibold flex items-end md:text-6xl lg:text-8xl md:text-left md:items-start"
             style={{ x: x1_2, opacity: opacity_2 }}
           >
             {" "}
             La paloma{" "}
           </motion.h1>{" "}
           <motion.h1
-            className="h-full text-xl box-border font-semibold overflow-hidden flex items-start md:text-7xl md:text-right md:w-full "
+            className="h-full text-xl box-border font-semibold overflow-hidden flex items-start md:text-6xl lg:text-8xl md:text-right md:w-full "
             style={{ x: x2_2, opacity: opacity_2 }}
           >
             {" "}
@@ -186,13 +186,13 @@ function Hero() {
           className="w-full h-[10%] flex flex-col justify-center items-end text-left  md:h-[20vh]"
         >
           <motion.h1
-            className="h-full box-border text-xl font-semibold overflow-hidden flex items-start justify-start md:text-7xl md:text-left"
+            className="h-full box-border text-xl font-semibold overflow-hidden flex items-start justify-start md:text-6xl lg:text-8xl md:text-left"
             style={{ x: x2_3, opacity: opacity_3 }}
           >
             Depresión Sonora
           </motion.h1>
           <motion.h1
-            className="h-full text-xl font-semibold flex items-start justify-start md:text-7xl md:text-left"
+            className="h-full text-xl font-semibold flex items-start justify-start md:text-6xl lg:text-8xl md:text-left"
             style={{ x: x1_3, opacity: opacity_3 }}
           >
             MAKINAVAJA
@@ -225,16 +225,16 @@ function Hero() {
         {/* texto */}
         <div className="w-full h-[10vh] flex flex-col justify-end items-start text-left md:justify-center md:w-3/5 ">
           <motion.h1
-            className="w-[75%] text-xl font-semibold flex items-start justify-start  text-left md:text-7xl md:text-left "
+            className="w-[75%] text-xl font-semibold flex items-start justify-start  text-left md:text-4xl  lg:text-6xl md:text-left "
             style={{ x: x1_4, opacity: opacity_4 }}
           >
             La plata
           </motion.h1>
         </div>
-        {/* Foto Abajo */}
+        {/* Foto Arriba  */}
         <div className="flex w-full h-[55vh] overflow-hidden md:h-[85vh] md:justify-center">
           <div
-            className="relative w-full h-[55vh] md:h-[85vh] md:items-center md:w-3/5 "
+            className="relative w-full h-[55vh] md:h-[85vh] md:items-center md:w-4/5 lg:w-3/5 "
             ref={containerRef5}
           >
             <motion.img
@@ -244,11 +244,11 @@ function Hero() {
           variants={fadeInLeft}
           transition={{ duration: 0.5 }}
               alt="Diego de espaldas"
-              className="absolute w-auto h-[30vh] shadow-lg  z-20 md:h-[50vh] "
+              className="absolute w-auto h-[30vh] shadow-lg  z-20 md:h-[45vh]  lg:h-[50vh]   "
               src="https://raw.githubusercontent.com/AlbbercaGit/videos/df25520c7988c6e6b1b5fa21be9da0e4c83219e8/331749368_739196417584794_4403896613756705700_n%20(1).jpg
 "
             ></motion.img>
-            {/* Foto Arriba */}
+            {/* Foto Abajo */}
             <div className=" flex justify-end items-end">
               <motion.img
           initial="hidden"
@@ -257,7 +257,7 @@ function Hero() {
           variants={fadeInRight}
           transition={{ duration: 0.5 }}
                 alt="Diego de espaldas"
-                className="absolute w-auto h-[30vh] shadow-lg  top-[50%] z-10 md:h-[50vh] md:top-[40%] "
+                className="absolute w-auto h-[30vh] shadow-lg  top-[50%] z-10 md:h-[45vh]  lg:h-[50vh] md:top-[45%] lg:top-[40%] "
                 src="https://raw.githubusercontent.com/AlbbercaGit/videos/df25520c7988c6e6b1b5fa21be9da0e4c83219e8/328869643_589075623164785_4558648590171868223_n.jpg
 
 
@@ -271,7 +271,7 @@ function Hero() {
         {/* texto 2*/}
         <div className="w-full h-[10vh] flex flex-col justify-start items-end text-left md:h-[10vh] md:w-3/5 md:justify-start">
           <motion.h1
-            className="w-[75%] box-border h-full text-xl font-semibold  overflow-hidden flex items-start justify-end md:text-7xl md:text-left "
+            className="w-[75%] box-border h-full text-xl font-semibold  overflow-hidden flex items-start justify-end md:text-4xl  lg:text-6xl md:text-left "
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false }}
