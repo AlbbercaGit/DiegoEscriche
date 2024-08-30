@@ -6,7 +6,7 @@ function Footer() {
   const { scrollYProgress } = useScroll({ target: targetRef });
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-80%"]);
   return (
-    <main ref={targetRef} className="relative h-[200vh] md:h-[350vh]">
+    <main ref={targetRef} className="relative h-[400vh] md:h-[350vh]">
       <div className="sticky w-full top-0 flex h-[100vh] items-center  overflow-hidden">
         
         <motion.div
