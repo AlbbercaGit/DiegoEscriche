@@ -1,5 +1,5 @@
 import React from 'react';
-// import { FaInstagram } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa6";
 
 
 const Footer = () => {
@@ -24,7 +24,7 @@ const Footer = () => {
           </div>        <div className='h-full'>
           <div className='flex flex-col justify-center items-center h-full w-full'>
             <div className='flex justify-center items-center h-2/5 w-full'>
-            {/* <a href='https://www.instagram.com/leromergastrobar/'><FaInstagram className='' /> </a> */}
+            <a href='https://www.instagram.com/diego.escriche/'><FaInstagram className='' /> </a>
            </div>
             <div className='flex justify-center items-center h-3/5 w-full'>
             <div className='flex justify-center items-center  bg-black h-2/5 w-[1px] min-h-6'><p></p></div>

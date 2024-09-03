@@ -60,7 +60,7 @@ function Hero() {
           }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <h1 className="text-lg sm:text-xl md:text-2xl  lg:text-black xl:text-4xl font-semibold flex items-start lg:row-start-2 xl:text-white lg:h-[50%] lg:w-[80%] lg:items-end lg:justify-center lg:font-normal z-10">
+          <h1 className="text-lg sm:text-xl md:text-2xl  lg:text-black xl:text-4xl font-semibold flex items-start lg:row-start-2 xl:text-white lg:h-[50%] lg:w-[80%] lg:items-end lg:justify-center lg:font-normal z-[9]">
             Based on Valencia
           </h1>
         </motion.div>
