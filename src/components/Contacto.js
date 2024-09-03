@@ -27,7 +27,7 @@ function Contacto() {
   return (
     <div className="font-sans p-6 max-w-2xl mx-auto h-screen flex justify-evenly items-center flex-col ">
       <motion.h2 
-        className="text-xl w-full text-left flex items-center font-bold h-[15vh]"
+        className="text-2xl w-full text-left flex items-center font-bold h-[15vh]"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false }}
@@ -83,7 +83,7 @@ function Contacto() {
           <div className="row-span-1 h-full flex flex-col justify-center w-full">
             <div className="text-center flex justify-center items-center flex-col h-full">
               <motion.p 
-                className="text-lg font-semibold h-1/3 flex items-center"
+                className="text-2xl font-semibold h-1/3 flex items-center"
                 variants={fadeInRight}
                 transition={{ duration: 0.5, delay: 0.2}}
 
@@ -119,7 +119,7 @@ function Contacto() {
           <div className="row-span-1 h-full flex flex-col justify-center w-full">
             <div className="text-center flex justify-center items-center flex-col h-full w-full">
               <motion.p 
-                className="text-lg font-semibold h-1/3 flex items-end w-full justify-center"
+                className="text-2xl font-semibold h-1/3 flex items-end w-full justify-center"
                 variants={fadeInRight}
                 transition={{ duration: 0.5, delay: 0.2 }}
 
