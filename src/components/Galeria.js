@@ -46,7 +46,7 @@ function Footer() {
 
             <iframe
               src="https://open.spotify.com/embed/track/1kTMe7VPlUt2gby7NqWzoi?utm_source=generator"
-              width="60%"
+              width="50%"
               height="352"
               frameBorder="0"
               allowfullscreen=""
