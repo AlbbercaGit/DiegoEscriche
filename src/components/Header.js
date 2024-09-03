@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from 'react-scroll';
+
 
 import "tailwindcss/tailwind.css";
 
@@ -63,24 +65,39 @@ const Header = () => {
         </button>
         {/* Menú de navegación para pantallas grandes */}
         <nav className="hidden md:flex md:items-center">
-          <ul className="flex space-x-4">
-            <li>
-              <a href="#home" className="hover:underline">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#about" className="hover:underline">
-                Proyectos
-              </a>
-            </li>
-            <li>
-              <a href="#contact" className="hover:underline">
-                Mezclas
-              </a>
-            </li>
-          </ul>
-        </nav>
+      <ul className="flex space-x-4">
+        <li>
+          <Link
+            to="home"
+            smooth={true}
+            duration={500}
+            className="cursor-pointer hover:underline"
+          >
+            Inicio
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="about"
+            smooth={true}
+            duration={500}
+            className="cursor-pointer hover:underline"
+          >
+            Proyectos
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="contact"
+            smooth={true}
+            duration={1500}
+            className="cursor-pointer hover:underline"
+          >
+            Mezclas
+          </Link>
+        </li>
+      </ul>
+    </nav>
       </motion.div>
 
       {/* Menú de navegación para pantallas pequeñas */}

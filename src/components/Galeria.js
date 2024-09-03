@@ -4,14 +4,14 @@ import React, { useRef, useEffect, useState } from "react";
 function Footer() {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: targetRef });
-  const [xValues, setXValues] = useState(["1%", "-81%"]);
+  const [xValues, setXValues] = useState(["1%", "-80%"]);
 
   // UseEffect para cambiar los valores de x según el tamaño de la pantalla
   useEffect(() => {
     const updateXValues = () => {
       if (window.innerWidth < 768) {
         // Pantallas móviles
-        setXValues(["1%", "-81%"]);
+        setXValues(["1%", "-80%"]);
       } else {
         // Pantallas más grandes (desktop/tablets)
         setXValues(["1%", "-40%"]);
@@ -30,7 +30,7 @@ function Footer() {
 
   const x = useTransform(scrollYProgress, [0, 1], xValues);
   return (
-    <main ref={targetRef} className="relative h-[400vh] md:h-[350vh]">
+    <main ref={targetRef} className="relative   h-[400vh] md:h-[350vh]">
       <div className="sticky w-full top-0 flex h-[100vh] items-center  overflow-hidden">
         <motion.div
           style={{ x }}

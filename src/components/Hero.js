@@ -25,10 +25,10 @@ function Hero() {
           }}
           transition={{ duration: 0.5}}
         >
-          <h1 className="w-full flex items-start text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
+          <h1 className="w-full flex items-start text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-6xl 2xl:text-8xl">
             Productor
           </h1>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl  2xl:text-8xl flex items-start lg:text-left">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-6xl  2xl:text-8xl flex items-start lg:text-left">
             Diego Escriche
           </h1>
         </motion.div>
@@ -60,7 +60,7 @@ function Hero() {
           }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <h1 className="text-lg sm:text-xl md:text-2xl  lg:text-black xl:text-4xl font-semibold flex items-start lg:row-start-2 xl:text-white lg:h-[50%] lg:w-[80%] lg:items-end lg:justify-center lg:font-normal z-[9]">
+          <h1 className=" text-lg sm:text-xl md:text-2xl  lg:text-black xl:text-4xl font-semibold flex items-start lg:row-start-2 xl:text-white lg:h-[50%] lg:w-[80%] lg:items-end lg:justify-center lg:font-normal 2xl:font-light z-[9]">
             Based on Valencia
           </h1>
         </motion.div>
@@ -75,10 +75,10 @@ function Hero() {
           }}
           transition={{ duration: 0.5, delay: 0.8 }}
         >
-          <h1 className="flex text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold">Producción</h1>
-          <h1 className="flex text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold">Mastering</h1>
-          <h1 className="flex text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold">Mezcla</h1>
-          <h1 className="flex text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold">Creativa</h1>
+          <h1 className="flex text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl 2xl:text-3xl  font-semibold">Producción</h1>
+          <h1 className="flex text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl 2xl:text-3xl font-semibold">Mastering</h1>
+          <h1 className="flex text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl 2xl:text-3xl font-semibold">Mezcla</h1>
+          <h1 className="flex text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl 2xl:text-3xl font-semibold">Creativa</h1>
         </motion.div>
       </div>
     </motion.div>

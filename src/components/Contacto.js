@@ -25,7 +25,7 @@ function Contacto() {
   };
 
   const fadeInRight = {
-    hidden: { opacity: 0, x: 50 },
+    hidden: { opacity: 0, x: 0 },
     visible: { opacity: 1, x: 0 },
   };
 const [showAlert, setShowAlert] = useState(false)
@@ -106,7 +106,7 @@ const [showAlert, setShowAlert] = useState(false)
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false }}
-          variants={fadeInRight}
+          variants={fadeInUp}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
           {/* Espacio vacío */}
@@ -117,7 +117,7 @@ const [showAlert, setShowAlert] = useState(false)
         target="_blank"
         rel="noopener noreferrer"
         className="text-2xl font-semibold h-2/5 flex items-center relative group"
-        variants={fadeInRight}
+        variants={fadeInUp}
         initial="hidden"
         animate="visible"
         transition={{ duration: 0.5, delay: 0.2 }}
@@ -131,7 +131,7 @@ const [showAlert, setShowAlert] = useState(false)
           {/* Imagen 2 */}
           <motion.div
             className="row-span-2 flex flex-col justify-center items-center w-full"
-            variants={fadeInRight}
+            variants={fadeInUp}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
             <img

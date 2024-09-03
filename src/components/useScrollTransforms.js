@@ -17,7 +17,7 @@ function useScrollTransforms(containerRef, offset = ["start end", "end start 0.0
   // Definimos las transformaciones basadas en el progreso del scroll
   const x1 = useTransform(limitedScrollYProgress, [0, 0.25, 1], ["-100%", "0%", "0%"]);
   const x2 = useTransform(limitedScrollYProgress, [0, 0.25, 1], ["70%", "0%", "0%"]);
-  const x3 = useTransform(limitedScrollYProgress, [0, 0.25, 1], ["15%", "0%", "0%"]);
+  const x3 = useTransform(limitedScrollYProgress, [0, 0.25, 1], ["12%", "0%", "0%"]);
 
   const opacity = useTransform(limitedScrollYProgress, [0, 0.45, 0.9, 1], [0, 1, 1, 1]);
 

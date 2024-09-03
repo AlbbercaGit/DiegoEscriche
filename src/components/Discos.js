@@ -17,7 +17,7 @@ export default function Component() {
 
   const {
     x1: x1_2,
-    x2: x2_2,
+    x3: x2_2,
     opacity: opacity_2,
   } = useScrollTransforms(containerRef2, ["start end", "end start 20"]);
 
@@ -59,13 +59,13 @@ export default function Component() {
       >
         <div className="w-full h-[15vh] flex justify-center items-center overflow-hidden md:h-full">
           <motion.h1
-            className="text-4xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-8xl font-semibold text-right"
+            className="h-full flex justify-center items-center text-4xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-5xl  2xl:text-8xl font-semibold text-right"
             style={{ x: x1_1, opacity: opacity_1 }}
           >
             Pro
           </motion.h1>
           <motion.h1
-            className="text-4xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-8xl font-semibold text-left overflow-hidden"
+            className="h-full flex justify-center items-center text-4xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-5xl  2xl:text-8xl font-semibold text-left overflow-hidden"
             style={{ x: x2_1, opacity: opacity_1 }}
           >
             yectos
@@ -95,13 +95,13 @@ export default function Component() {
           ref={containerRef2}
         >
           <motion.h1
-            className="h-full text-3xl sm:text-2xl md:text-2xl lg:text-4xl xl:text-6xl font-semibold flex items-end md:items-start"
+            className="h-full text-3xl sm:text-2xl md:text-2xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-semibold flex items-end md:items-start"
             style={{ x: x1_2, opacity: opacity_2 }}
           >
             La paloma
           </motion.h1>
           <motion.h1
-            className="h-full text-3xl sm:text-2xl md:text-2xl lg:text-4xl xl:text-6xl font-semibold overflow-hidden flex items-center justify-end md:w-full"
+            className="h-full text-3xl sm:text-2xl md:text-2xl lg:text-4xl xl:text-5xl 2xl:text-6xl  font-semibold overflow-hidden flex items-center justify-end md:w-full"
             style={{ x: x2_2, opacity: opacity_2 }}
           >
             Todavia no
@@ -146,13 +146,13 @@ export default function Component() {
           className="w-full h-[10vh] flex flex-col justify-center  text-left md:h-[20vh]"
         >
           <motion.h1
-            className="h-full text-3xl sm:text-xl md:text-2xl lg:text-4xl xl:text-6xl font-semibold overflow-hidden flex items-center justify-end"
+            className="h-full text-3xl sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-semibold overflow-hidden flex items-center justify-end"
             style={{ x: x2_3, opacity: opacity_3 }}
           >
             Depresión Sonora
           </motion.h1>
           <motion.h1
-            className="h-full text-3xl sm:text-xl md:text-2xl lg:text-4xl xl:text-6xl font-semibold flex items-start justify-start"
+            className="h-full text-3xl sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-semibold flex items-start justify-start"
             style={{ x: x1_3, opacity: opacity_3 }}
           >
             Makinavaja
@@ -182,7 +182,7 @@ export default function Component() {
         {/* texto */}
         <div className="w-full h-[10vh] flex flex-col justify-end items-start text-left md:justify-center md:w-3/5">
           <motion.h1
-            className="w-[75%] text-3xl sm:text-xl md:text-2xl lg:text-4xl xl:text-6xl font-semibold flex items-start justify-start text-left"
+            className="w-[75%] text-3xl sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-semibold flex items-start justify-start text-left"
             style={{ x: x1_4, opacity: opacity_4 }}
           >
             La plata
@@ -222,7 +222,7 @@ export default function Component() {
         {/* texto 2*/}
         <div className="w-full h-[10vh] flex flex-col justify-start items-end text-left md:h-[10vh] md:w-3/5 md:justify-start">
           <motion.h1
-            className="w-[75%] text-3xl sm:text-xl md:text-2xl lg:text-4xl xl:text-6xl font-semibold overflow-hidden flex items-start justify-end"
+            className="w-[75%] text-3xl sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-semibold overflow-hidden flex items-start justify-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false }}

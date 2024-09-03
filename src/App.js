@@ -18,9 +18,15 @@ function App() {
     <ReactLenis root>
       <div className="App">
         <Header />
-        <Hero />
-        <Discos />
+        <section id="home">
+          <Hero />
+        </section>
+        <section id="about">
+          <Discos />
+        </section>
+        <section id="contact">
         <Galeria />
+        </section>
         <Contacto />
         <Footer />
       </div>
