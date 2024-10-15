@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/DiegoEscriche/static/css/main.e4e196d6.css",
-    "main.js": "/DiegoEscriche/static/js/main.74d3ad0a.js",
+    "main.css": "/DiegoEscriche/static/css/main.bafd6253.css",
+    "main.js": "/DiegoEscriche/static/js/main.48a2e769.js",
     "static/js/453.ca90ef89.chunk.js": "/DiegoEscriche/static/js/453.ca90ef89.chunk.js",
+    "static/media/TransitionSection": "/DiegoEscriche/static/media/TransitionSection.0ff40ffbc2a7702635d2",
     "index.html": "/DiegoEscriche/index.html",
-    "main.e4e196d6.css.map": "/DiegoEscriche/static/css/main.e4e196d6.css.map",
-    "main.74d3ad0a.js.map": "/DiegoEscriche/static/js/main.74d3ad0a.js.map",
+    "main.bafd6253.css.map": "/DiegoEscriche/static/css/main.bafd6253.css.map",
+    "main.48a2e769.js.map": "/DiegoEscriche/static/js/main.48a2e769.js.map",
     "453.ca90ef89.chunk.js.map": "/DiegoEscriche/static/js/453.ca90ef89.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e4e196d6.css",
-    "static/js/main.74d3ad0a.js"
+    "static/css/main.bafd6253.css",
+    "static/js/main.48a2e769.js"
   ]
 }

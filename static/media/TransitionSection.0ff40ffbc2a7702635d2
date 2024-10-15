@@ -1,0 +1,47 @@
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+
+export default function TransitionSection() {
+  const sectionRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"]
+  });
+
+  const backgroundColor = useTransform(
+    scrollYProgress,
+    [0, 0.5, 1],
+    ["#ffffff", "#f3f4f6", "#e5e7eb"]
+  );
+
+  const y1 = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
+  const y2 = useTransform(scrollYProgress, [0, 1], ["0%", "-25%"]);
+  const y3 = useTransform(scrollYProgress, [0, 1], ["0%", "-10%"]);
+
+  return (
+    <motion.section
+      ref={sectionRef}
+      className="h-screen relative overflow-hidden"
+      style={{ backgroundColor }}
+    >
+      <motion.div
+        className="absolute inset-0 flex items-center justify-center"
+        style={{ y: y1 }}
+      >
+        <div className="text-6xl font-bold text-gray-200">Música</div>
+      </motion.div>
+      <motion.div
+        className="absolute inset-0 flex items-center justify-center"
+        style={{ y: y2 }}
+      >
+        <div className="text-7xl font-bold text-gray-300">Creatividad</div>
+      </motion.div>
+      <motion.div
+        className="absolute inset-0 flex items-center justify-center"
+        style={{ y: y3 }}
+      >
+        <div className="text-8xl font-bold text-gray-400">Contacto</div>
+      </motion.div>
+    </motion.section>
+  );
+}
